@@ -1,9 +1,11 @@
 <?php
 
+
 $url = $_GET['url'];
 if(!is_string($url)) die();
 $url = str_replace(array(';',' '),'',$url);
 echo $url;
+
 
 $filename = '/tmp/'.md5($url).'.pdf';
 if(file_exists($filename)){
